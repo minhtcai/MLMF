@@ -8,16 +8,19 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage[noend]{algpseudocode}
 
-
-\title{Project Ideas:}
+\title{3MF: Multimodal Meta-Learning for \\Federated Tasks}
 
 
 % Authors must not appear in the submitted version. They should be hidden
 % as long as the \iclrfinalcopy macro remains commented out below.
 % Non-anonymous submissions will be rejected without review.
 
-\author{Antiquus S.~Hippocampus, Natalia Cerebro \& Amelie P. Amygdale \thanks{ Use footnote for providing further information
+\author{Zejun Gong, Roochi Shah \& Minh Tran \thanks{ Use footnote for providing further information
 about author (webpage, alternative address)---\emph{not} for acknowledging
 funding agencies.  Funding acknowledgements go at the end of the paper.} \\
 Department of Computer Science\\
@@ -54,462 +57,568 @@ Address \\
 
 \maketitle
 
-\section{Final Idea}
-- take a dataset with multiple modalities: text, voice, images\\
-- use modified version of maml, start w classification task
+% \section{Final Idea}
+% - take a dataset with multiple modalities: text, voice, images\\
+% - use modified version of maml, start w classification task
 
-\section{Roochi Ideas}
-\subsection{Meta-Learning for Federated Learning Initialization}
-How can meta-learning be used to initialize federated learning models more effectively? Developing meta-learning algorithms that can adaptively initialize models for different federated learning tasks could lead to significant performance improvements.\\
-\textbf{Work 1}\\
-\textbf{Work 2} \\
-\textbf{Work 3}\\
-\subsection{Transfer Meta-Learning in Federated Environments}
-How can meta-learning enable better knowledge transfer across federated clients? 
-\subsection{Cross-Domain Federated Learning w Meta Learning}
-How can meta-learning facilitate fed learning across different domains/modalities?
+% \section{Roochi Ideas}
+% \subsection{Meta-Learning for Federated Learning Initialization}
+% How can meta-learning be used to initialize federated learning models more effectively? Developing meta-learning algorithms that can adaptively initialize models for different federated learning tasks could lead to significant performance improvements.\\
+% \textbf{Work 1}\\
+% \textbf{Work 2} \\
+% \textbf{Work 3}\\
+% \subsection{Transfer Meta-Learning in Federated Environments}
+% How can meta-learning enable better knowledge transfer across federated clients? 
+% \subsection{Cross-Domain Federated Learning w Meta Learning}
+% How can meta-learning facilitate fed learning across different domains/modalities?
 
-\section{Minh Ideas}
-\subsection{\textbf{Topic 1: Meta-learning for Multimodal in Federated Learning}}
-\subsubsection{Introduction}
-\textbf{Goal:} How can we do do meta-learning for multimodal efficiently?
-\subsubsection{Related Work}
-\href{https://arxiv.org/pdf/1802.07876.pdf}{Federated Meta-Learning with Fast Convergence and Efficient Communication}\\
-\href{https://dl.acm.org/doi/10.1145/3580305.3599825}{FedMultimodal: A Benchmark for Multimodal Federated Learning}. \href{https://github.com/usc-sail/fed-multimodal}{Github}\\
-\href{https://arxiv.org/pdf/2302.08888.pdf}{\textbf{Multimodal Federated Learning via Contrastive Representation Ensemble}}. \href{https://github.com/FLAIR-THU/CreamFL}{Github}\\ 
-\href{https://link.springer.com/article/10.1007/s11633-022-1398-0}{Federated Learning on Multimodal Data: A Comprehensive Survey} \\
-\href{https://arxiv.org/pdf/1705.10467.pdf}{Federated Multi-Task Learning} \\
-\href{https://arxiv.org/pdf/2002.07948.pdf}{Personalized Federated Learning: A Meta-Learning
-Approach} \\
-\href{https://arxiv.org/pdf/2204.01678.pdf}{MultiMAE: Multi-modal Multi-task Masked Autoencoders}\\
-\href{https://arxiv.org/pdf/2102.10772.pdf}{UniT: Multimodal Multitask Learning with a Unified Transformer}\\
-\href{https://arxiv.org/pdf/2110.14202.pdf}{Revisit Multimodal Meta-Learning
-through the Lens of Multi-Task Learning}\\
-\href{}{A unified framework for multi-modal federated learning}
-\subsubsection{Approach}
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{diagram.png}
-    \caption{Diagram}
-    \label{fig:enter-label}
-\end{figure}
+% \section{Minh Ideas}
+% \subsection{\textbf{Topic 1: Meta-learning for Multimodal in Federated Learning}}
+% \subsubsection{Introduction}
+% \textbf{Goal:} How can we do do meta-learning for multimodal efficiently?
+% \subsubsection{Related Work}
+% \href{https://arxiv.org/pdf/1802.07876.pdf}{Federated Meta-Learning with Fast Convergence and Efficient Communication}\\
+% \href{https://dl.acm.org/doi/10.1145/3580305.3599825}{FedMultimodal: A Benchmark for Multimodal Federated Learning}. \href{https://github.com/usc-sail/fed-multimodal}{Github}\\
+% \href{https://arxiv.org/pdf/2302.08888.pdf}{\textbf{Multimodal Federated Learning via Contrastive Representation Ensemble}}. \href{https://github.com/FLAIR-THU/CreamFL}{Github}\\ 
+% \href{https://link.springer.com/article/10.1007/s11633-022-1398-0}{Federated Learning on Multimodal Data: A Comprehensive Survey} \\
+% \href{https://arxiv.org/pdf/1705.10467.pdf}{Federated Multi-Task Learning} \\
+% \href{https://arxiv.org/pdf/2002.07948.pdf}{Personalized Federated Learning: A Meta-Learning
+% Approach} \\
+% \href{https://arxiv.org/pdf/2204.01678.pdf}{MultiMAE: Multi-modal Multi-task Masked Autoencoders}\\
+% \href{https://arxiv.org/pdf/2102.10772.pdf}{UniT: Multimodal Multitask Learning with a Unified Transformer}\\
+% \href{https://arxiv.org/pdf/2110.14202.pdf}{Revisit Multimodal Meta-Learning
+% through the Lens of Multi-Task Learning}\\
+% \href{}{A unified framework for multi-modal federated learning}
+% \subsubsection{Approach}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{diagram.png}
+%     \caption{Diagram}
+%     \label{fig:enter-label}
+% \end{figure}
 
-\subsection{\textbf{Topic 2: Meta-learning for Differentital Privacy}}
-\subsubsection{Introduction}
-\textbf{Goal:} Learning how to learn with privacy-focused
-\subsubsection{Related Work}
-\href{https://arxiv.org/pdf/1909.05830.pdf}{DIFFERENTIALLY PRIVATE META-LEARNING}\\
-\href{https://arxiv.org/pdf/2205.12493.pdf}{Federated Self-supervised Learning for
-Heterogeneous Clients}\\
-\href{https://ieeexplore.ieee.org/document/9488825}{AdaPDP: Adaptive Personalized Differential Privacy}
-\href{https://arxiv.org/pdf/2305.15165.pdf}{Personalized DP-SGD using Sampling Mechanisms}
-\subsubsection{Approach}
-
-
+% \subsection{\textbf{Topic 2: Meta-learning for Differentital Privacy}}
+% \subsubsection{Introduction}
+% \textbf{Goal:} Learning how to learn with privacy-focused
+% \subsubsection{Related Work}
+% \href{https://arxiv.org/pdf/1909.05830.pdf}{DIFFERENTIALLY PRIVATE META-LEARNING}\\
+% \href{https://arxiv.org/pdf/2205.12493.pdf}{Federated Self-supervised Learning for
+% Heterogeneous Clients}\\
+% \href{https://ieeexplore.ieee.org/document/9488825}{AdaPDP: Adaptive Personalized Differential Privacy}
+% \href{https://arxiv.org/pdf/2305.15165.pdf}{Personalized DP-SGD using Sampling Mechanisms}
+% \subsubsection{Approach}
 
 
 
-\section{Zejun ideas}
-\subsection{\textbf{Topic 1: Different server/client optimizers for pretained model}}
-\href{https://arxiv.org/abs/2206.15387} {WHERE TO BEGIN? ON THE IMPACT OF PRETRAINING AND INITIALIZATION IN FEDERATED LEARNING}\\
-When deploying FL to a production environment, using adaptive server optimizers such as FedAdam together with SGD at the client is a simple and competitive approach when it is possible to start from a pre-trained model. (what about other optimizers?)
-
-\subsection{\textbf{Topic 2: build metrics for measuring personalized performance}}
-\href{https://arxiv.org/abs/1909.12488} {Improving Federated Learning Personalization via Model Agnostic Meta Learning}\\
-comprehensive metrics for measuring personalized performance, is a small improvement for every client preferable to a larger improvement for a subset of clients? under what conditions the shared global model is better than independent per-device models.
-
-\subsection{\textbf{Topic 3: Hyper Parameter optimization (HPO)}}
-Hyperparameter optimization (HPO) mainly concerns how to improve the model accuracy rather than communication and computing efficacy for mobile devices. Therefore, we expect that further research should consider developing solutions for efficient
-hyperparameter optimization in the context of federated learning.
-— separate tuning of the aggregation / global
-model update rule and local client optimizer, number of clients selected per round, number of local steps per
-round, configuration of update compression algorithms, and more
-
-\subsection{\textbf{Topic 4: multi-modal}}
-Pre-tain models on both vision and nlp seperately on different clients and see if the combination of esults can be applied to multi-modal 
-
-\subsection{\textbf{Draft Idea Novelty}}
-1. Multimodalities (text, voice) optional (images) \\
-2. Meta/Personalization (MAML, Prototypical Networks) \\
-Output (classification) optional (regression, generation) \\
-Pretrained models ()
-
-Example:
-\begin{itemize}
-    \item Personalized sentiment prediction based on voice and text. Benchmark pretrained-sentiment prediciton models. Can fine-tune.
-    \item Same as above but for word prediction.
-    \item 
-    \item 
-\end{itemize}
-
-TO DO
-\begin{itemize}
-    \item Introduction
-    \item Related Works
-    \item Methods
-    \item Experiments
-    \item \textbf{MAML} + \textbf{Efficient Fine-tuning }+ MModality for Classification
-    \item 26th
-    \item 
-    \item Related paper review: read about MAML, Client Adaptation 
-    \item Application idea: each will have 1 application idea 
-    \item Baselines: find baseline accordingly
-    \item Draw exp diagram: if possible
-    \item Find dataset: find dataset accoringly
-    \item Intro + slides: Talk on Monday 23th
-    \item 
-\end{itemize}
 
 
-\subsection{\textbf{Other important factors}}
-communication efficiency (syn/asyn), stragglers, fault tolerance...
+% \section{Zejun ideas}
+% \subsection{\textbf{Topic 1: Different server/client optimizers for pretained model}}
+% \href{https://arxiv.org/abs/2206.15387} {WHERE TO BEGIN? ON THE IMPACT OF PRETRAINING AND INITIALIZATION IN FEDERATED LEARNING}\\
+% When deploying FL to a production environment, using adaptive server optimizers such as FedAdam together with SGD at the client is a simple and competitive approach when it is possible to start from a pre-trained model. (what about other optimizers?)
+
+% \subsection{\textbf{Topic 2: build metrics for measuring personalized performance}}
+% \href{https://arxiv.org/abs/1909.12488} {Improving Federated Learning Personalization via Model Agnostic Meta Learning}\\
+% comprehensive metrics for measuring personalized performance, is a small improvement for every client preferable to a larger improvement for a subset of clients? under what conditions the shared global model is better than independent per-device models.
+
+% \subsection{\textbf{Topic 3: Hyper Parameter optimization (HPO)}}
+% Hyperparameter optimization (HPO) mainly concerns how to improve the model accuracy rather than communication and computing efficacy for mobile devices. Therefore, we expect that further research should consider developing solutions for efficient
+% hyperparameter optimization in the context of federated learning.
+% — separate tuning of the aggregation / global
+% model update rule and local client optimizer, number of clients selected per round, number of local steps per
+% round, configuration of update compression algorithms, and more
+
+% \subsection{\textbf{Topic 4: multi-modal}}
+% Pre-tain models on both vision and nlp seperately on different clients and see if the combination of esults can be applied to multi-modal 
+
+% \subsection{\textbf{Draft Idea Novelty}}
+% 1. Multimodalities (text, voice) optional (images) \\
+% 2. Meta/Personalization (MAML, Prototypical Networks) \\
+% Output (classification) optional (regression, generation) \\
+% Pretrained models ()
+
+% Example:
+% \begin{itemize}
+%     \item Personalized sentiment prediction based on voice and text. Benchmark pretrained-sentiment prediciton models. Can fine-tune.
+%     \item Same as above but for word prediction.
+%     \item 
+%     \item 
+% \end{itemize}
+
+% TO DO
+% \begin{itemize}
+%     \item Introduction
+%     \item Related Works
+%     \item Methods
+%     \item Experiments
+%     \item \textbf{MAML} + \textbf{Efficient Fine-tuning }+ MModality for Classification
+%     \item 26th
+%     \item 
+%     \item Related paper review: read about MAML, Client Adaptation 
+%     \item Application idea: each will have 1 application idea 
+%     \item Baselines: find baseline accordingly
+%     \item Draw exp diagram: if possible
+%     \item Find dataset: find dataset accoringly
+%     \item Intro + slides: Talk on Monday 23th
+%     \item 
+% \end{itemize}
+
+
+% \subsection{\textbf{Other important factors}}
+% communication efficiency (syn/asyn), stragglers, fault tolerance...
 
 
 \begin{abstract}
-For now each of team member will come up with 3 ideas and for the next sync we will narrow down do 1?
+We present a novel approach in the domain of federated learning (FL), particularly focusing on addressing the challenges posed by modality heterogeneity, variability in modality availability across clients, and the prevalent issue of missing data. We introduce a meta-learning framework specifically designed for multimodal federated tasks. Our approach is motivated by the need to enable federated models to robustly adapt when exposed to new modalities, a common scenario in FL where clients often differ in the number of available modalities. The effectiveness of our proposed framework is demonstrated through extensive experimentation on an augmented MNIST dataset, enriched with audio and sign language data. We demonstrate that the proposed algorithm achieves better performance than the baseline on a subset of missing modality scenarios with careful tuning of the meta-learning rates. Code and full report could be found on our \href{https://github.com/minhtcai/MLMF}{Github}.
+
+
 \end{abstract}
 
 \section{Introduction}
 
-ICLR requires electronic submissions, processed by
-\url{https://openreview.net/}. See ICLR's website for more instructions.
+Federated learning, \cite{fedavg}, a paradigm of distributed machine learning, faces unique challenges when extended to multimodal data. The heterogeneity of modalities, coupled with their variable availability across different clients, and the frequent occurrence of missing data, poses significant obstacles. Previous work in multimodal learning assumes full availability of all modalities. When applied to the federated setting, this assumption falters as systems heterogeneity challenges cannot guarantee full availability of all modalities across every client. This paper introduces a meta-learning based approach tailored to multi-modal federated tasks. This approach is designed to collaboratively learn a global model in spite of missing data in one or multiple modalities across clients. Our work is inspired by previous works applying meta-learning to overcome missing data in various modalities and applying meta-learning to overcome systems heterogeneity challenges in federated learning. 
 
-If your paper is ultimately accepted, the statement {\tt
-  {\textbackslash}iclrfinalcopy} should be inserted to adjust the
-format to the camera ready requirements.
 
-The format for the submissions is a variant of the NeurIPS format.
-Please read carefully the instructions below, and follow them
-faithfully.
+% ICLR requires electronic submissions, processed by
+% \url{https://openreview.net/}. See ICLR's website for more instructions.
 
-\subsection{Style}
+% If your paper is ultimately accepted, the statement {\tt
+%   {\textbackslash}iclrfinalcopy} should be inserted to adjust the
+% format to the camera ready requirements.
 
-Papers to be submitted to ICLR 2024 must be prepared according to the
-instructions presented here.
+% The format for the submissions is a variant of the NeurIPS format.
+% Please read carefully the instructions below, and follow them
+% faithfully.
 
-%% Please note that we have introduced automatic line number generation
-%% into the style file for \LaTeXe. This is to help reviewers
-%% refer to specific lines of the paper when they make their comments. Please do
-%% NOT refer to these line numbers in your paper as they will be removed from the
-%% style file for the final version of accepted papers.
+% \subsection{Style}
 
-Authors are required to use the ICLR \LaTeX{} style files obtainable at the
-ICLR website. Please make sure you use the current files and
-not previous versions. Tweaking the style files may be grounds for rejection.
+% Papers to be submitted to ICLR 2024 must be prepared according to the
+% instructions presented here.
 
-\subsection{Retrieval of style files}
+% %% Please note that we have introduced automatic line number generation
+% %% into the style file for \LaTeXe. This is to help reviewers
+% %% refer to specific lines of the paper when they make their comments. Please do
+% %% NOT refer to these line numbers in your paper as they will be removed from the
+% %% style file for the final version of accepted papers.
 
-The style files for ICLR and other conference information are available online at:
-\begin{center}
-   \url{http://www.iclr.cc/}
-\end{center}
-The file \verb+iclr2024_conference.pdf+ contains these
-instructions and illustrates the
-various formatting requirements your ICLR paper must satisfy.
-Submissions must be made using \LaTeX{} and the style files
-\verb+iclr2024_conference.sty+ and \verb+iclr2024_conference.bst+ (to be used with \LaTeX{}2e). The file
-\verb+iclr2024_conference.tex+ may be used as a ``shell'' for writing your paper. All you
-have to do is replace the author, title, abstract, and text of the paper with
-your own.
+% Authors are required to use the ICLR \LaTeX{} style files obtainable at the
+% ICLR website. Please make sure you use the current files and
+% not previous versions. Tweaking the style files may be grounds for rejection.
 
-The formatting instructions contained in these style files are summarized in
-sections \ref{gen_inst}, \ref{headings}, and \ref{others} below.
+% \subsection{Retrieval of style files}
 
-\section{General formatting instructions}
+% The style files for ICLR and other conference information are available online at:
+% \begin{center}
+%    \url{http://www.iclr.cc/}
+% \end{center}
+% The file \verb+iclr2024_conference.pdf+ contains these
+% instructions and illustrates the
+% various formatting requirements your ICLR paper must satisfy.
+% Submissions must be made using \LaTeX{} and the style files
+% \verb+iclr2024_conference.sty+ and \verb+iclr2024_conference.bst+ (to be used with \LaTeX{}2e). The file
+% \verb+iclr2024_conference.tex+ may be used as a ``shell'' for writing your paper. All you
+% have to do is replace the author, title, abstract, and text of the paper with
+% your own.
+
+% The formatting instructions contained in these style files are summarized in
+% sections \ref{gen_inst}, \ref{headings}, and \ref{others} below.
+
+\section{Related Works}
 \label{gen_inst}
 
-The text must be confined within a rectangle 5.5~inches (33~picas) wide and
-9~inches (54~picas) long. The left margin is 1.5~inch (9~picas).
-Use 10~point type with a vertical spacing of 11~points. Times New Roman is the
-preferred typeface throughout. Paragraphs are separated by 1/2~line space,
-with no indentation.
+\subsection{Federated Meta Learning}
+Federated learning, known for its decentralized nature and emphasis on privacy, faces challenges like data heterogeneity and communication overhead. Meta-learning, or learning to learn, offers solutions by enabling models to quickly adapt to new data distributions. FedMeta, \cite{fedmeta}: As previously discussed, FedMeta demonstrates how integrating meta-learning in FL can lead to enhanced communication efficiency, faster convergence, and improved accuracy while maintaining privacy. Meta-learning approaches such as Model Agnostic Meta-Learning \cite{maml} have shown promise to improve personalization when applied to federated settings \cite{personalized_fed} by allowing models to adapt rapidly with minimal data. This synergy of FL and meta-learning is key in developing robust and efficient learning systems.
 
-Paper title is 17~point, in small caps and left-aligned.
-All pages should start at 1~inch (6~picas) from the top of the page.
+\subsection{Federated Multimodal}
+Federated learning in multimodal contexts addresses challenges of learning from diverse data types (like images, text, audio) across distributed nodes. This field is complex due to the varying nature and availability of modalities at different nodes, which is a challenge we seek to address in our work. FedMultimodal, \cite{multifed}: FedMultimodal is a framework which assesses FL robustness against multimodal data issues and proposes a systematic approach for multimodal FL. Other contributions in this domain often focuses on efficient data representation and fusion techniques. For example, MultiModal Federated Learning \cite{multifed} (MMFL)propose methods for integrating diverse data types efficiently in a federated manner.
 
-Authors' names are
-set in boldface, and each name is placed above its corresponding
-address. The lead author's name is to be listed first, and
-the co-authors' names are set to follow. Authors sharing the
-same address can be on the same line.
+\subsection{Multimodal Meta Learning}
+Meta-learning applied to multimodal learning, \cite{metamul} focuses on creating models that can swiftly adapt to new modalities or changes in data distribution. This is crucial in domains where data from different sources or modalities must be integrated seamlessly. SMIL, \cite{smil}: This paper is a significant contribution to the field, addressing the challenge of missing modalities in multimodal datasets through Bayesian Meta-Learning.
+%Additional Insights: Techniques such as cross-modal meta-learning are being explored, where learning from one modality can aid in quick adaptation to another. This is particularly useful in scenarios with sparse or imbalanced data across modalities.
+% The text must be confined within a rectangle 5.5~inches (33~picas) wide and
+% 9~inches (54~picas) long. The left margin is 1.5~inch (9~picas).
+% Use 10~point type with a vertical spacing of 11~points. Times New Roman is the
+% preferred typeface throughout. Paragraphs are separated by 1/2~line space,
+% with no indentation.
 
-Please pay special attention to the instructions in section \ref{others}
-regarding figures, tables, acknowledgments, and references.
+% Paper title is 17~point, in small caps and left-aligned.
+% All pages should start at 1~inch (6~picas) from the top of the page.
+
+% Authors' names are
+% set in boldface, and each name is placed above its corresponding
+% address. The lead author's name is to be listed first, and
+% the co-authors' names are set to follow. Authors sharing the
+% same address can be on the same line.
+
+% Please pay special attention to the instructions in section \ref{others}
+% regarding figures, tables, acknowledgments, and references.
 
 
-There will be a strict upper limit of 9 pages for the main text of the initial submission, with unlimited additional pages for citations. 
+% There will be a strict upper limit of 9 pages for the main text of the initial submission, with unlimited additional pages for citations. 
 
-\section{Headings: first level}
+\section{Proposed Methods}
 \label{headings}
+Our proposed method applies meta-learning principles within a federated learning framework to address the challenges posed by multimodal data diversity within each client. The core of this approach lies in creating a robust initial model that can adapt effectively with the introduction of each new modality. 
 
-First level headings are in small caps,
-flush left and in point size 12. One line space before the first level
-heading and 1/2~line space after the first level heading.
+As shown in \textbf{Algoritthm 1}: for each client, the meta-learning setting is MAML, \cite{maml}, where experiments were design for the model to learn with a limited set of modalities. This aligns with our assumption that not all clients have same number of available modalities. For client training, the available data were splitted to support set and query set as input for the inner loop and outer loop of MAML. The parameters of global model then was updated using FedAvg, \cite{fedavg} for each communication round.
 
-\subsection{Headings: second level}
+% By leveraging meta-learning, our method enables the federated model to quickly and efficiently adjust to varying modalities, ensuring that even clients with missing data modalities can contribute to and benefit from the collective learning process. This approach not only enhances the adaptability of the model across diverse data types but also ensures a more inclusive and comprehensive learning environment in federated settings.
 
-Second level headings are in small caps,
-flush left and in point size 10. One line space before the second level
-heading and 1/2~line space after the second level heading.
+\begin{document}
 
-\subsubsection{Headings: third level}
+\begin{algorithm}
+\caption{FedMeta-Multi-Modal}
+\begin{algorithmic}[1]
+\STATE \textbf{// Run on the server}
+\STATE \textbf{AlgorithmUpdate:}
+\STATE Initialize model parameter $\theta$ for MAML.
+\FOR{each communication round $t = 1, 2, \dots$}
+    \STATE Sample a set $U_t$ of $m$ clients, and distribute $\theta$ to the sampled clients
+        \FOR{each client $u \in U_t$ in parallel}
+        \STATE Get test loss $g_u \leftarrow \text{LocalTraining}(\theta)$       
+    \ENDFOR
+\ENDFOR
+    \State Update algorithm parameters $\theta \leftarrow \theta - \beta \sum_{u \in U_t} g_u$
+\STATE
+\STATE \textbf{// Run on client u}
+\STATE \textbf{LocalTraining}($\theta$):
+\STATE Sample data points \left\{ x^1_S , x^2_S,x^3_S, y_S \right\}\sim $D^u_S$ as support set $D^u_S$ and 
+\left\{ x^1_Q , x^2_Q,x^3_Q, y_Q \right\} \sim $D^u_S$ as query set $D^u_Q$, the modalities in each sample data point are aligned
+\STATE $L_{D^u_S}(\theta) \leftarrow \frac{1}{|D^u_S|} \sum_{(x,y) \in D^u_S} \ell(f_\theta(x), y)$
+\STATE $\theta^u \leftarrow \theta - \alpha \nabla L^{D^u_S}(\theta)$
+\STATE $L_{D^u_Q}(\theta_u) \leftarrow \frac{1}{|D^u_Q|} \sum_{(x_0,y_0) \in D^u_Q} \ell(f_{\theta_u}(x_0), y_0)$
+\STATE $g_u \leftarrow \nabla_\theta L_{D^u_Q}(\theta_u)$
+\STATE Return $g_u$ to server
+\end{algorithmic}
+\end{algorithm}
 
-Third level headings are in small caps,
-flush left and in point size 10. One line space before the third level
-heading and 1/2~line space after the third level heading.
+% First level headings are in small caps,
+% flush left and in point size 12. One line space before the first level
+% heading and 1/2~line space after the first level heading.
 
-\section{Citations, figures, tables, references}
-\label{others}
+% \subsection{Headings: second level}
 
-These instructions apply to everyone, regardless of the formatter being used.
+% Second level headings are in small caps,
+% flush left and in point size 10. One line space before the second level
+% heading and 1/2~line space after the second level heading.
 
-\subsection{Citations within the text}
+% \subsubsection{Headings: third level}
 
-Citations within the text should be based on the \texttt{natbib} package
-and include the authors' last names and year (with the ``et~al.'' construct
-for more than two authors). When the authors or the publication are
-included in the sentence, the citation should not be in parenthesis using \verb|\citet{}| (as
-in ``See \citet{Hinton06} for more information.''). Otherwise, the citation
-should be in parenthesis using \verb|\citep{}| (as in ``Deep learning shows promise to make progress
-towards AI~\citep{Bengio+chapter2007}.'').
+% Third level headings are in small caps,
+% flush left and in point size 10. One line space before the third level
+% heading and 1/2~line space after the third level heading.
 
-The corresponding references are to be listed in alphabetical order of
-authors, in the \textsc{References} section. As to the format of the
-references themselves, any style is acceptable as long as it is used
-consistently.
+% \section{Citations, figures, tables, references}
+% \label{others}
 
-\subsection{Footnotes}
+% These instructions apply to everyone, regardless of the formatter being used.
 
-Indicate footnotes with a number\footnote{Sample of the first footnote} in the
-text. Place the footnotes at the bottom of the page on which they appear.
-Precede the footnote with a horizontal rule of 2~inches
-(12~picas).\footnote{Sample of the second footnote}
+% \subsection{Citations within the text}
 
-\subsection{Figures}
+% Citations within the text should be based on the \texttt{natbib} package
+% and include the authors' last names and year (with the ``et~al.'' construct
+% for more than two authors). When the authors or the publication are
+% included in the sentence, the citation should not be in parenthesis using \verb|\citet{}| (as
+% in ``See \citet{Hinton06} for more information.''). Otherwise, the citation
+% should be in parenthesis using \verb|\citep{}| (as in ``Deep learning shows promise to make progress
+% towards AI~\citep{Bengio+chapter2007}.'').
 
-All artwork must be neat, clean, and legible. Lines should be dark
-enough for purposes of reproduction; art work should not be
-hand-drawn. The figure number and caption always appear after the
-figure. Place one line space before the figure caption, and one line
-space after the figure. The figure caption is lower case (except for
-first word and proper nouns); figures are numbered consecutively.
+% The corresponding references are to be listed in alphabetical order of
+% authors, in the \textsc{References} section. As to the format of the
+% references themselves, any style is acceptable as long as it is used
+% consistently.
 
-Make sure the figure caption does not get separated from the figure.
-Leave sufficient space to avoid splitting the figure and figure caption.
+% \subsection{Footnotes}
 
-You may use color figures.
-However, it is best for the
-figure captions and the paper body to make sense if the paper is printed
-either in black/white or in color.
-\begin{figure}[h]
-\begin{center}
-%\framebox[4.0in]{$\;$}
-\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-\end{center}
-\caption{Sample figure caption.}
-\end{figure}
+% Indicate footnotes with a number\footnote{Sample of the first footnote} in the
+% text. Place the footnotes at the bottom of the page on which they appear.
+% Precede the footnote with a horizontal rule of 2~inches
+% (12~picas).\footnote{Sample of the second footnote}
 
-\subsection{Tables}
+% \subsection{Figures}
 
-All tables must be centered, neat, clean and legible. Do not use hand-drawn
-tables. The table number and title always appear before the table. See
-Table~\ref{sample-table}.
+% All artwork must be neat, clean, and legible. Lines should be dark
+% enough for purposes of reproduction; art work should not be
+% hand-drawn. The figure number and caption always appear after the
+% figure. Place one line space before the figure caption, and one line
+% space after the figure. The figure caption is lower case (except for
+% first word and proper nouns); figures are numbered consecutively.
 
-Place one line space before the table title, one line space after the table
-title, and one line space after the table. The table title must be lower case
-(except for first word and proper nouns); tables are numbered consecutively.
+% Make sure the figure caption does not get separated from the figure.
+% Leave sufficient space to avoid splitting the figure and figure caption.
 
-\begin{table}[t]
-\caption{Sample table title}
-\label{sample-table}
-\begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf PART}  &\multicolumn{1}{c}{\bf DESCRIPTION}
-\\ \hline \\
-Dendrite         &Input terminal \\
-Axon             &Output terminal \\
-Soma             &Cell body (contains cell nucleus) \\
+% You may use color figures.
+% However, it is best for the
+% figure captions and the paper body to make sense if the paper is printed
+% either in black/white or in color.
+% \begin{figure}[h]
+% \begin{center}
+% %\framebox[4.0in]{$\;$}
+% \fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+% \end{center}
+% \caption{Sample figure caption.}
+% \end{figure}
+
+% \subsection{Tables}
+
+% All tables must be centered, neat, clean and legible. Do not use hand-drawn
+% tables. The table number and title always appear before the table. See
+% Table~\ref{sample-table}.
+
+% Place one line space before the table title, one line space after the table
+% title, and one line space after the table. The table title must be lower case
+% (except for first word and proper nouns); tables are numbered consecutively.
+
+% \begin{table}[t]
+% \caption{Sample table title}
+% \label{sample-table}
+% \begin{center}
+% \begin{tabular}{ll}
+% \multicolumn{1}{c}{\bf PART}  &\multicolumn{1}{c}{\bf DESCRIPTION}
+% \\ \hline \\
+% Dendrite         &Input terminal \\
+% Axon             &Output terminal \\
+% Soma             &Cell body (contains cell nucleus) \\
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+% \section{Default Notation}
+
+% In an attempt to encourage standardized notation, we have included the
+% notation file from the textbook, \textit{Deep Learning}
+% \cite{goodfellow2016deep} available at
+% \url{https://github.com/goodfeli/dlbook_notation/}.  Use of this style
+% is not required and can be disabled by commenting out
+% \texttt{math\_commands.tex}.
+
+
+% \centerline{\bf Numbers and Arrays}
+% \bgroup
+% \def\arraystretch{1.5}
+% \begin{tabular}{p{1in}p{3.25in}}
+% $\displaystyle a$ & A scalar (integer or real)\\
+% $\displaystyle \va$ & A vector\\
+% $\displaystyle \mA$ & A matrix\\
+% $\displaystyle \tA$ & A tensor\\
+% $\displaystyle \mI_n$ & Identity matrix with $n$ rows and $n$ columns\\
+% $\displaystyle \mI$ & Identity matrix with dimensionality implied by context\\
+% $\displaystyle \ve^{(i)}$ & Standard basis vector $[0,\dots,0,1,0,\dots,0]$ with a 1 at position $i$\\
+% $\displaystyle \text{diag}(\va)$ & A square, diagonal matrix with diagonal entries given by $\va$\\
+% $\displaystyle \ra$ & A scalar random variable\\
+% $\displaystyle \rva$ & A vector-valued random variable\\
+% $\displaystyle \rmA$ & A matrix-valued random variable\\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+
+% \centerline{\bf Sets and Graphs}
+% \bgroup
+% \def\arraystretch{1.5}
+
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle \sA$ & A set\\
+% $\displaystyle \R$ & The set of real numbers \\
+% $\displaystyle \{0, 1\}$ & The set containing 0 and 1 \\
+% $\displaystyle \{0, 1, \dots, n \}$ & The set of all integers between $0$ and $n$\\
+% $\displaystyle [a, b]$ & The real interval including $a$ and $b$\\
+% $\displaystyle (a, b]$ & The real interval excluding $a$ but including $b$\\
+% $\displaystyle \sA \backslash \sB$ & Set subtraction, i.e., the set containing the elements of $\sA$ that are not in $\sB$\\
+% $\displaystyle \gG$ & A graph\\
+% $\displaystyle \parents_\gG(\ervx_i)$ & The parents of $\ervx_i$ in $\gG$
+% \end{tabular}
+% \vspace{0.25cm}
+
+
+% \centerline{\bf Indexing}
+% \bgroup
+% \def\arraystretch{1.5}
+
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle \eva_i$ & Element $i$ of vector $\va$, with indexing starting at 1 \\
+% $\displaystyle \eva_{-i}$ & All elements of vector $\va$ except for element $i$ \\
+% $\displaystyle \emA_{i,j}$ & Element $i, j$ of matrix $\mA$ \\
+% $\displaystyle \mA_{i, :}$ & Row $i$ of matrix $\mA$ \\
+% $\displaystyle \mA_{:, i}$ & Column $i$ of matrix $\mA$ \\
+% $\displaystyle \etA_{i, j, k}$ & Element $(i, j, k)$ of a 3-D tensor $\tA$\\
+% $\displaystyle \tA_{:, :, i}$ & 2-D slice of a 3-D tensor\\
+% $\displaystyle \erva_i$ & Element $i$ of the random vector $\rva$ \\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+
+
+% \centerline{\bf Calculus}
+% \bgroup
+% \def\arraystretch{1.5}
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% % NOTE: the [2ex] on the next line adds extra height to that row of the table.
+% % Without that command, the fraction on the first line is too tall and collides
+% % with the fraction on the second line.
+% $\displaystyle\frac{d y} {d x}$ & Derivative of $y$ with respect to $x$\\ [2ex]
+% $\displaystyle \frac{\partial y} {\partial x} $ & Partial derivative of $y$ with respect to $x$ \\
+% $\displaystyle \nabla_\vx y $ & Gradient of $y$ with respect to $\vx$ \\
+% $\displaystyle \nabla_\mX y $ & Matrix derivatives of $y$ with respect to $\mX$ \\
+% $\displaystyle \nabla_\tX y $ & Tensor containing derivatives of $y$ with respect to $\tX$ \\
+% $\displaystyle \frac{\partial f}{\partial \vx} $ & Jacobian matrix $\mJ \in \R^{m\times n}$ of $f: \R^n \rightarrow \R^m$\\
+% $\displaystyle \nabla_\vx^2 f(\vx)\text{ or }\mH( f)(\vx)$ & The Hessian matrix of $f$ at input point $\vx$\\
+% $\displaystyle \int f(\vx) d\vx $ & Definite integral over the entire domain of $\vx$ \\
+% $\displaystyle \int_\sS f(\vx) d\vx$ & Definite integral with respect to $\vx$ over the set $\sS$ \\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+
+% \centerline{\bf Probability and Information Theory}
+% \bgroup
+% \def\arraystretch{1.5}
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle P(\ra)$ & A probability distribution over a discrete variable\\
+% $\displaystyle p(\ra)$ & A probability distribution over a continuous variable, or over
+% a variable whose type has not been specified\\
+% $\displaystyle \ra \sim P$ & Random variable $\ra$ has distribution $P$\\% so thing on left of \sim should always be a random variable, with name beginning with \r
+% $\displaystyle  \E_{\rx\sim P} [ f(x) ]\text{ or } \E f(x)$ & Expectation of $f(x)$ with respect to $P(\rx)$ \\
+% $\displaystyle \Var(f(x)) $ &  Variance of $f(x)$ under $P(\rx)$ \\
+% $\displaystyle \Cov(f(x),g(x)) $ & Covariance of $f(x)$ and $g(x)$ under $P(\rx)$\\
+% $\displaystyle H(\rx) $ & Shannon entropy of the random variable $\rx$\\
+% $\displaystyle \KL ( P \Vert Q ) $ & Kullback-Leibler divergence of P and Q \\
+% $\displaystyle \mathcal{N} ( \vx ; \vmu , \mSigma)$ & Gaussian distribution %
+% over $\vx$ with mean $\vmu$ and covariance $\mSigma$ \\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+
+% \centerline{\bf Functions}
+% \bgroup
+% \def\arraystretch{1.5}
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle f: \sA \rightarrow \sB$ & The function $f$ with domain $\sA$ and range $\sB$\\
+% $\displaystyle f \circ g $ & Composition of the functions $f$ and $g$ \\
+%   $\displaystyle f(\vx ; \vtheta) $ & A function of $\vx$ parametrized by $\vtheta$.
+%   (Sometimes we write $f(\vx)$ and omit the argument $\vtheta$ to lighten notation) \\
+% $\displaystyle \log x$ & Natural logarithm of $x$ \\
+% $\displaystyle \sigma(x)$ & Logistic sigmoid, $\displaystyle \frac{1} {1 + \exp(-x)}$ \\
+% $\displaystyle \zeta(x)$ & Softplus, $\log(1 + \exp(x))$ \\
+% $\displaystyle || \vx ||_p $ & $\normlp$ norm of $\vx$ \\
+% $\displaystyle || \vx || $ & $\normltwo$ norm of $\vx$ \\
+% $\displaystyle x^+$ & Positive part of $x$, i.e., $\max(0,x)$\\
+% $\displaystyle \1_\mathrm{condition}$ & is 1 if the condition is true, 0 otherwise\\
+% \end{tabular}
+% \egroup
+\vspace{0.25cm}
+
+
+
+\section{Experiments \& Results}
+\subsection{Dataset}
+We manually collected 3 independent single-modality dataset and preprocessed them by matching data points with the same label across different datasets to form our multi-modal dataset that contains 2062 samples with 10 labels in total.
+\begin{itemize}
+    \item \textbf{The Sign-Language-Digits-Dataset} \cite{sign} is a collection of images used for recognizing numerical digits from 0 to 9 in sign language. Each gesture is a distinct representation of a numerical digit. The dataset contains 2062 samples and 10 labels.
+    \item \textbf{The MNIST-Dataset} \cite{mnist} consists of 60,000 handwritten training digit images. Each image has a label that represents a digit from 0 to 9.
+    \item \textbf{The Free-Spoken-Digit-Dataset} \cite{fsdd} is a simple audio dataset similar in spirit to the classic MNIST dataset but for speech recognition. It contains recordings of spoken digits in English, from 0 to 9. Each digit is pronounced by a variety of speakers. The dataset audios are represented as spectrograms contains 3000 samples in total.
+\end{itemize}
+\subsection{Network Architecture}
+We designed a Multi-Modal Neural Network for processing data from three distinct modalities: image, spectrogram, and sign language. It employs a modular branch structure for each modality, followed by a unified classification stage
+We compare the proposed approach with the following baseline method:
+Image Branch:
+\begin{itemize}
+    \item \textbf{The Image branch} Comprises two convolutional layers, each followed by ReLU activation and max-pooling.
+    \item \textbf{The Spectrogram Branch} Contains four convolutional layers, each accompanied by ReLU activation. The last two layers are followed by max-pooling.
+    \item \textbf{The Sign Branch} structures similarly to the Image Branch with two convolutional layers, ReLU activations, and max-pooling.
+\end{itemize}
+After processing through their respective branches, the outputs are flattened and concatenated. This combined feature vector is then fed into two fully connected layers for final classification, accommodating up to 10 classes.
+\subsection{Baseline Method}
+We conduct our baseline experiments by simply training the dataset with missing modalities on the network structure and test their performance on full modality scenarios. For instance, we deliberately mute the sign branch (set its branch output to be zeros) and feed the training data to the network to mimic the scenario of missing the sign modality. Then we test the model performance by bringing back the sign branch and see how the results go for full modality. In Table 1 we show the testing results of performance of training on 6 different missing modality scenarios (column) and testing against full modality (row). 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+ & \textbf{img/sign} & \textbf{sp/sign} & \textbf{img/sp} & \textbf{img} & \textbf{spectrogram} & \textbf{sign} \\ \hline
+\textbf{img/spectrogram/sign} & 100\% & 20.603\% & 100\% & 100\% & 8.495\% & 13.349\% \\ \hline
 \end{tabular}
-\end{center}
+\caption{Results for training with missing modalities and test on full modality}
+\label{tab:your_table_label}
+\end{table}
+\subsection{3MF method}
+We conduct experiments for the proposed 3MF method by configuring 5 local training epochs and 50 global epochs in total. Within each client we split the client dataset into 20\% of support set and 80\% of query set and tested various combinations of outer learning rate and inner learning rate. Similar to the baseline method, we conduct 6 experiments with distinct missing modality scenarios. In each experiment, the support set of each client contains the missing modality data while the query set contains full modality. Note that for each experiment the support set for each client contains the same modality type, each client only has image and spectrogram modality for example. In all experiment settings we set the inner learning rate to be smaller than outer learning rate because the support set size is generally smaller than the query set size. A larger inner learning rate might result in overshooting the optimal parameters for the specific task, leading to poor performance on that task. It might also lead to over-fitting the task for missing the nuanced patterns that are essential for generalization. In table 2 we show the testing performance of the 6 experiment settings.
+
+We observe that our proposed algorithm has the best testing performance on full modality data when client number is set to 3 and outer lr set to 0.001, inner lr set to 0.00001. The model has significant improvement when the clients only contain spectrogram/sign, spectrogram, and sign modality data. Even the rest of the missing modality scenarios does not reach 100\% accuracy as the baseline, we observe smaller variance in performance for all scenarios. For client number= 5 overall, we observe worse performance than the baseline.
+We also included the training loss/accuracy curve for the best case in the appendix.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{Meta Learning rate} & \textbf{img/sign} & \textbf{spect/sign} & \textbf{img/spect} & \textbf{img} & \textbf{spect} & \textbf{sign}\\ \hline
+\multicolumn{7}{|c|}{\textbf{Client Number = 3}} \\ \hline
+outer lr=0.001, inner lr = 0.00001 & 86.407\% & \textbf{94.660\%} & 91.747\%  & 94.174\%  & \textbf{69.417\%}  & \textbf{92.718\%}\\
+outer lr=0.01, inner lr=0.00001 & 9.223\% & \textbf{49.757\%} & 9.223\%  & 9.223\%  & \textbf{9.223\%}  & \textbf{40.776\%}\\
+outer lr=0.001, inner lr=0.0001  & 50.000\% & 11.407\% & 92.233\%  & 93.203\%  & \textbf{10.194\%}  & \textbf{83.009\%}\\
+outer lr=0.01, inner lr=0.0001  & 71.475\% & \textbf{80.660\%} & 90.445\%  & 94.174\%  & \textbf{50.417\%}  & \textbf{89.783\%}\\ \hline
+\multicolumn{7}{|c|}{\textbf{Client Number = 5}} \\ \hline
+outer lr=0.001, inner lr = 0.00001 & 10.922\% & 11.407\% & 9.951\%  & 10.436\%  & \textbf{10.436\%}  & 10.436\%\\
+outer lr=0.01, inner lr=0.00001 & 9.142\% & 12.132\% & 9.723\%  & 11.342\%  & \textbf{10.412\%}  & 10.452\%\\
+outer lr=0.001, inner lr=0.0001  & 10.841\% & 7.481\% & 9.103\%  & 14.412\%  & \textbf{13.314\%}  & 9.341\%\\
+outer lr=0.01, inner lr=0.0001  & 8.131\% & 13.132\% & 9.634\%  & 9.152\%  & \textbf{9.143\%}  & 10.512\%\\ \hline
+
+\end{tabular}
+\caption{Performance Comparison Across Different Models and Supports}
+\label{tab:performance_comparison}
 \end{table}
 
-\section{Default Notation}
+% Because each modality is only trained by a particular branch and the way we handle missing modalities is to set the output for that branch to be zeros. The only way for the model to learn the missing modality is through the 2 fully connected layers which is the cause of over-fitting.
+\section{Conclusion}
 
-In an attempt to encourage standardized notation, we have included the
-notation file from the textbook, \textit{Deep Learning}
-\cite{goodfellow2016deep} available at
-\url{https://github.com/goodfeli/dlbook_notation/}.  Use of this style
-is not required and can be disabled by commenting out
-\texttt{math\_commands.tex}.
+This paper contributes to the burgeoning field of multimodal federated learning by introducing a novel meta-learning framework to learn a global model in spite of missing modalities between clients. Our approach addresses the critical challenges of modality heterogeneity and variability in federated environments. Through extensive experimentation on an augmented MNIST dataset, enriched with audio and sign language, we demonstrate the framework's efficacy in enhancing adaptability to varying modalities. 
 
+\subsection*{Limitations and Future Directions}
 
-\centerline{\bf Numbers and Arrays}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1in}p{3.25in}}
-$\displaystyle a$ & A scalar (integer or real)\\
-$\displaystyle \va$ & A vector\\
-$\displaystyle \mA$ & A matrix\\
-$\displaystyle \tA$ & A tensor\\
-$\displaystyle \mI_n$ & Identity matrix with $n$ rows and $n$ columns\\
-$\displaystyle \mI$ & Identity matrix with dimensionality implied by context\\
-$\displaystyle \ve^{(i)}$ & Standard basis vector $[0,\dots,0,1,0,\dots,0]$ with a 1 at position $i$\\
-$\displaystyle \text{diag}(\va)$ & A square, diagonal matrix with diagonal entries given by $\va$\\
-$\displaystyle \ra$ & A scalar random variable\\
-$\displaystyle \rva$ & A vector-valued random variable\\
-$\displaystyle \rmA$ & A matrix-valued random variable\\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
+\textbf{Limitations}: One limitation of our study is the reliance on a specific dataset, which may not fully represent the diverse range of real-world scenarios. This limitation is in-part caused by computational and time constraints imposed on us through the project (i.e. lack of AWS resources caused by limit increase requests). As a result, we were limited by multimodal datasets that can fit in google colab. Another limitation was the inability to test on the SMIL bayesian meta-learning baseline and integrating it into the federated learning framework. This is due to, in-part, to the complexity of integrating this framework to a federated setting due to ambiguities in the problem formulation, but also due to AWS resource constraints on the increased time it takes to run these experiments. 
 
-\centerline{\bf Sets and Graphs}
-\bgroup
-\def\arraystretch{1.5}
+\textbf{Future Directions}: Future research should focus on extending the framework to more diverse and complex datasets, exploring the scalability of the approach, and analyzing how its privacy guarantees compare to other federated multimodal baselines. There is also a need for more sophisticated methods for handling extreme cases of modality missingness and imbalance. The exploration of different meta-learning strategies to further enhance the adaptability and efficiency of federated multimodal learning systems remains an open and promising area of research. 
 
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle \sA$ & A set\\
-$\displaystyle \R$ & The set of real numbers \\
-$\displaystyle \{0, 1\}$ & The set containing 0 and 1 \\
-$\displaystyle \{0, 1, \dots, n \}$ & The set of all integers between $0$ and $n$\\
-$\displaystyle [a, b]$ & The real interval including $a$ and $b$\\
-$\displaystyle (a, b]$ & The real interval excluding $a$ but including $b$\\
-$\displaystyle \sA \backslash \sB$ & Set subtraction, i.e., the set containing the elements of $\sA$ that are not in $\sB$\\
-$\displaystyle \gG$ & A graph\\
-$\displaystyle \parents_\gG(\ervx_i)$ & The parents of $\ervx_i$ in $\gG$
-\end{tabular}
-\vspace{0.25cm}
+% Adapting SMIL bayesian-meta learning for modality missingness [cite] to a federated setting may help combat extreme cases of modality missingness. 
 
+% Please prepare PostScript or PDF files with paper size ``US Letter'', and
+% not, for example, ``A4''. The -t
+% letter option on dvips will produce US Letter files.
 
-\centerline{\bf Indexing}
-\bgroup
-\def\arraystretch{1.5}
+% Consider directly generating PDF files using \verb+pdflatex+
+% (especially if you are a MiKTeX user).
+% PDF figures must be substituted for EPS figures, however.
 
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle \eva_i$ & Element $i$ of vector $\va$, with indexing starting at 1 \\
-$\displaystyle \eva_{-i}$ & All elements of vector $\va$ except for element $i$ \\
-$\displaystyle \emA_{i,j}$ & Element $i, j$ of matrix $\mA$ \\
-$\displaystyle \mA_{i, :}$ & Row $i$ of matrix $\mA$ \\
-$\displaystyle \mA_{:, i}$ & Column $i$ of matrix $\mA$ \\
-$\displaystyle \etA_{i, j, k}$ & Element $(i, j, k)$ of a 3-D tensor $\tA$\\
-$\displaystyle \tA_{:, :, i}$ & 2-D slice of a 3-D tensor\\
-$\displaystyle \erva_i$ & Element $i$ of the random vector $\rva$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
+% Otherwise, please generate your PostScript and PDF files with the following commands:
+% \begin{verbatim}
+% dvips mypaper.dvi -t letter -Ppdf -G0 -o mypaper.ps
+% ps2pdf mypaper.ps mypaper.pdf
+% \end{verbatim}
 
+% \subsection{Margins in LaTeX}
 
-\centerline{\bf Calculus}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-% NOTE: the [2ex] on the next line adds extra height to that row of the table.
-% Without that command, the fraction on the first line is too tall and collides
-% with the fraction on the second line.
-$\displaystyle\frac{d y} {d x}$ & Derivative of $y$ with respect to $x$\\ [2ex]
-$\displaystyle \frac{\partial y} {\partial x} $ & Partial derivative of $y$ with respect to $x$ \\
-$\displaystyle \nabla_\vx y $ & Gradient of $y$ with respect to $\vx$ \\
-$\displaystyle \nabla_\mX y $ & Matrix derivatives of $y$ with respect to $\mX$ \\
-$\displaystyle \nabla_\tX y $ & Tensor containing derivatives of $y$ with respect to $\tX$ \\
-$\displaystyle \frac{\partial f}{\partial \vx} $ & Jacobian matrix $\mJ \in \R^{m\times n}$ of $f: \R^n \rightarrow \R^m$\\
-$\displaystyle \nabla_\vx^2 f(\vx)\text{ or }\mH( f)(\vx)$ & The Hessian matrix of $f$ at input point $\vx$\\
-$\displaystyle \int f(\vx) d\vx $ & Definite integral over the entire domain of $\vx$ \\
-$\displaystyle \int_\sS f(\vx) d\vx$ & Definite integral with respect to $\vx$ over the set $\sS$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
+% Most of the margin problems come from figures positioned by hand using
+% \verb+\special+ or other commands. We suggest using the command
+% \verb+\includegraphics+
+% from the graphicx package. Always specify the figure width as a multiple of
+% the line width as in the example below using .eps graphics
+% \begin{verbatim}
+%    \usepackage[dvips]{graphicx} ...
+%    \includegraphics[width=0.8\linewidth]{myfile.eps}
+% \end{verbatim}
+% or % Apr 2009 addition
+% \begin{verbatim}
+%    \usepackage[pdftex]{graphicx} ...
+%    \includegraphics[width=0.8\linewidth]{myfile.pdf}
+% \end{verbatim}
+% for .pdf graphics.
+% See section~4.4 in the graphics bundle documentation (\url{http://www.ctan.org/tex-archive/macros/latex/required/graphics/grfguide.ps})
 
-\centerline{\bf Probability and Information Theory}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle P(\ra)$ & A probability distribution over a discrete variable\\
-$\displaystyle p(\ra)$ & A probability distribution over a continuous variable, or over
-a variable whose type has not been specified\\
-$\displaystyle \ra \sim P$ & Random variable $\ra$ has distribution $P$\\% so thing on left of \sim should always be a random variable, with name beginning with \r
-$\displaystyle  \E_{\rx\sim P} [ f(x) ]\text{ or } \E f(x)$ & Expectation of $f(x)$ with respect to $P(\rx)$ \\
-$\displaystyle \Var(f(x)) $ &  Variance of $f(x)$ under $P(\rx)$ \\
-$\displaystyle \Cov(f(x),g(x)) $ & Covariance of $f(x)$ and $g(x)$ under $P(\rx)$\\
-$\displaystyle H(\rx) $ & Shannon entropy of the random variable $\rx$\\
-$\displaystyle \KL ( P \Vert Q ) $ & Kullback-Leibler divergence of P and Q \\
-$\displaystyle \mathcal{N} ( \vx ; \vmu , \mSigma)$ & Gaussian distribution %
-over $\vx$ with mean $\vmu$ and covariance $\mSigma$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
+% A number of width problems arise when LaTeX cannot properly hyphenate a
+% line. Please give LaTeX hyphenation hints using the \verb+\-+ command.
 
-\centerline{\bf Functions}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle f: \sA \rightarrow \sB$ & The function $f$ with domain $\sA$ and range $\sB$\\
-$\displaystyle f \circ g $ & Composition of the functions $f$ and $g$ \\
-  $\displaystyle f(\vx ; \vtheta) $ & A function of $\vx$ parametrized by $\vtheta$.
-  (Sometimes we write $f(\vx)$ and omit the argument $\vtheta$ to lighten notation) \\
-$\displaystyle \log x$ & Natural logarithm of $x$ \\
-$\displaystyle \sigma(x)$ & Logistic sigmoid, $\displaystyle \frac{1} {1 + \exp(-x)}$ \\
-$\displaystyle \zeta(x)$ & Softplus, $\log(1 + \exp(x))$ \\
-$\displaystyle || \vx ||_p $ & $\normlp$ norm of $\vx$ \\
-$\displaystyle || \vx || $ & $\normltwo$ norm of $\vx$ \\
-$\displaystyle x^+$ & Positive part of $x$, i.e., $\max(0,x)$\\
-$\displaystyle \1_\mathrm{condition}$ & is 1 if the condition is true, 0 otherwise\\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
+% \subsubsection*{Author Contributions}
+% Equal contribution blabla
 
-
-
-\section{Final instructions}
-Do not change any aspects of the formatting parameters in the style files.
-In particular, do not modify the width or length of the rectangle the text
-should fit into, and do not change font sizes (except perhaps in the
-\textsc{References} section; see below). Please note that pages should be
-numbered.
-
-\section{Preparing PostScript or PDF files}
-
-Please prepare PostScript or PDF files with paper size ``US Letter'', and
-not, for example, ``A4''. The -t
-letter option on dvips will produce US Letter files.
-
-Consider directly generating PDF files using \verb+pdflatex+
-(especially if you are a MiKTeX user).
-PDF figures must be substituted for EPS figures, however.
-
-Otherwise, please generate your PostScript and PDF files with the following commands:
-\begin{verbatim}
-dvips mypaper.dvi -t letter -Ppdf -G0 -o mypaper.ps
-ps2pdf mypaper.ps mypaper.pdf
-\end{verbatim}
-
-\subsection{Margins in LaTeX}
-
-Most of the margin problems come from figures positioned by hand using
-\verb+\special+ or other commands. We suggest using the command
-\verb+\includegraphics+
-from the graphicx package. Always specify the figure width as a multiple of
-the line width as in the example below using .eps graphics
-\begin{verbatim}
-   \usepackage[dvips]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.eps}
-\end{verbatim}
-or % Apr 2009 addition
-\begin{verbatim}
-   \usepackage[pdftex]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.pdf}
-\end{verbatim}
-for .pdf graphics.
-See section~4.4 in the graphics bundle documentation (\url{http://www.ctan.org/tex-archive/macros/latex/required/graphics/grfguide.ps})
-
-A number of width problems arise when LaTeX cannot properly hyphenate a
-line. Please give LaTeX hyphenation hints using the \verb+\-+ command.
-
-\subsubsection*{Author Contributions}
-If you'd like to, you may include  a section for author contributions as is done
-in many journals. This is optional and at the discretion of the authors.
-
-\subsubsection*{Acknowledgments}
-Use unnumbered third level headings for the acknowledgments. All
-acknowledgments, including those to funding agencies, go at the end of the paper.
+% \subsubsection*{Acknowledgments}
+% Professor and TAs blabla
 
 
 \bibliography{iclr2024_conference}
@@ -517,6 +626,47 @@ acknowledgments, including those to funding agencies, go at the end of the paper
 
 \appendix
 \section{Appendix}
-You may include other additional sections here.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{diagram2.png}
+    \caption{Pipline overview of the system}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{best_result.png}
+    \caption{Training loss/accuracy for outer lr=0.001 and inner lr = 0.00001}
+    \label{fig:enter-label}
+\end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{diagram.png}
+%     \caption{Diagram}
+%     \label{fig:enter-label}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{diagram.png}
+%     \caption{Diagram}
+%     \label{fig:enter-label}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{diagram.png}
+%     \caption{Diagram}
+%     \label{fig:enter-label}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{diagram.png}
+%     \caption{Diagram}
+%     \label{fig:enter-label}
+% \end{figure}
+
 
 \end{document}
