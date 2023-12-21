@@ -1,5 +1,5 @@
 ## Multi-modal Meta-learning for Federated Tasks. ##
-#### In ICML 2017 [[Project Website]](TBD) [[Project Report]](https://arxiv.org/pdf/2312.10179.pdf)
+#### In TBD 2024 [[Project Website]](TBD) [[Project Report]](https://arxiv.org/pdf/2312.10179.pdf)
 
 [Minh Tran](https://minhtcai.github.io/), [Roochi Shah](TBD), [Zejun Gong](TBD)<br/>
 Carnegie Mellon University<br/>
