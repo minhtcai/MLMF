@@ -6,5 +6,5 @@ Carnegie Mellon University<br/>
 
 
 
-#### Federated Code were modified from the original contributer here: 
+#### Federated Code were modified from the original contributor here: 
 https://www.kaggle.com/code/puru98/federated-learning-pytorch
